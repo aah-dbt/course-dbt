@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: stage_postgres__addresses
+    description: Postgres Base table addresses to TRANSFORMER_DEV_WH
+    columns:
+      - name: address_id 
+        tests:
+          - unique
+          - not_null
+
+  - name: stage_postgres__users
+    description: Postgres Base table users to TRANSFORMER_DEV_WH
+    columns:
+      - name: user_id 
+        tests:
+          - unique
+          - not_null
+
+  - name: stage_postgres__events
+    description: Postgres Base table events to TRANSFORMER_DEV_WH
+    columns:
+      - name: event_id 
+        tests:
+          - unique
+          - not_null
+
+  - name: stage_postgres__orders
+    description: Postgres Base table orders to TRANSFORMER_DEV_WH
+    columns:
+      - name: order_id 
+        tests:
+          - unique
+          - not_null
+
+  - name: stage_postgres__order_items
+    description: Postgres Base table order_items to TRANSFORMER_DEV_WH
+    columns:
+      - name: order_id 
+        tests:  
+          - not_null
+      - name: product_id 
+        tests:
+          - not_null
+
+  - name: stage_postgres__products
+    description: Postgres Base table products to TRANSFORMER_DEV_WH
+    columns:
+      - name: product_id 
+        tests:  
+          - unique
+          - not_null 
+
+  - name: stage_postgres__promos
+    description: Postgres Base table promos to TRANSFORMER_DEV_WH
+    columns:
+      - name: promo_id 
+        tests:  
+          - unique
+          - not_null 
